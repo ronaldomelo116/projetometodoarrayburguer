@@ -73,9 +73,9 @@ function sumAll() {
          <p style="margin-bottom: 10px;">${formatCurrency(product.price)}</p>
         `;
     });
-
+    instruction.textContent = '';
     list.innerHTML = `
-         <li class="burger-item reduce-item">
+         <li class="list-item  reduce-item">
             ${receiptItems}
             <hr style="border: 1px solid var(--bk-red); margin-bottom: 15px;">
             <p class="item-price">Total da Compra <br>${formatCurrency(someAll)}</p>

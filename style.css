@@ -189,6 +189,14 @@ details:hover {
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
 }
 
+.list-item {
+    border: solid 3px#fff;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
 .reduce-item {
     grid-column: 1 / -1;
     justify-self: center;
