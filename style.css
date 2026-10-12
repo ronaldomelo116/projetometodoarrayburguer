@@ -1,104 +1,192 @@
+:root {
+    --bk-bg: #F5EBDC;
+    /* Fundo bege/creme característico */
+    --bk-red: #D62300;
+    /* Botões de compra e CTAs */
+    --bk-orange: #FF8732;
+    /* Acentos e etiquetas */
+    --bk-text: #502314;
+    /* Cor dos textos e títulos */
+    --bk-yellow: #FFC72C;
+    /* Destaques secundários */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
+
 }
 
-:root {
-    --color-Rich-Mahogany: #230007;
-    --color-Golden-Glow: #d7cf07;
-    --color-Amber-Earth: #d98324;
-    --color-inferno: #a40606;
-    --color-Black-Cherry: #5a0002;
-}
 
 body {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--color-Amber-Earth);
+    background-color: var(--bk-bg);
+    color: var(--bk-text);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .nav-header {
     display: flex;
-    gap: 20px;
-    margin: 40px;
+    gap: 30px;
+    margin: 60px 40px 20px;
 }
 
 .nav-header button {
-    width: 300px;
+    width: 200px;
+    height: 100px;
     border: solid 1px var(--color-Amber-Earth);
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 40px;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
-    background-color: var(--color-Black-Cherry);
+    background-color: var(--bk-red);
     color: #fff;
     transition: all 0.3s ease-in-out;
+
 }
 
 .method-name {
-    color: var(--color-Amber-Earth);
+    color: var(--bk-yellow);
+    font-weight: bold;
+}
+
+.method-name.explanation {
+    color: var(--bk-red);
 }
 
 
 .nav-header button:hover {
     transform: translateY(-5px);
-    color: var(--color-Amber-Earth);
+    color: var(--bk-yellow);
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
-    border: solid 2px var(--color-Amber-Earth);
+    border: solid 1px var(--bk-yellow);
 }
 
 h1 {
-    margin-bottom: 40px;
-    color: #fff;
-    font-size: 3rem;
+    text-align: center;
+    margin: 10px 0;
+    color: #606266;
+    font-size: 2rem;
     text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
 }
+
+.instruction {
+    text-align: center;
+    font-size: 2rem;
+}
+
 
 ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, 150px);
+    justify-content: center;
+    max-width: 680px;
+    gap: 20px;
 }
- .burger-item {
+
+.burger-item {
+    border: solid 3px#fff;
     border-radius: 10px;
-    background-color: #a40606;
-    padding: 20px;
-    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.37);
- }
+    background-color: #fff;
+    padding: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-item:hover {
+    transform: scale(1.05);
+}
 
 .burger-img {
     width: 100%;
     border: solid 2px var(--color-Golden-Glow);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 10px;
+    background-color: var(--bk-bg);
 }
 
 .item-name {
     margin-bottom: 10px;
-    color: #fff;
-    font-size: 1.3rem;
+    color: var(--bk-text);
+    font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
     font-weight: 500;
+    text-align: center;
 }
 
 .item-price {
-    color: var(--color-Golden-Glow);
+    color: var(--bk-red);
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.discount-badge {
+    background-color: var(--bk-yellow);
+    color: var(--bk-text);
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 0.9em;
+    margin-right: 5px;
 }
 
 .explanation-method {
     text-align: center;
-    margin-top: 40px;
-    color: #fff;
-    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--bk-text);
+    font-size: 1rem;
     text-transform: uppercase;
     line-height: 1.5;
+}
+
+details {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+    color: var(--bk-orange);
+}
+
+.sintaxe-img {
+    width: 800px;
+    max-width: 90vw;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sintaxe-img:hover {
+    width: 100%;
+    position: relative;
+    z-index: 999;  
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
 }
 
 .reduce-item {
@@ -107,8 +195,110 @@ ul {
     text-align: center;
     width: max-content;
     border-radius: 10px;
-    background-color: #a40606;
+    background-color: #fff;
     padding: 20px;
-    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.37);
-    font-size: 2rem;
+    font-size: 1rem;
+    color: var(--bk-red);
+}
+
+.rodape {
+    margin-top: 40px;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    color: var(--bk-bg);
+    background-color: var(--bk-text);
+}
+
+.rodape-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-info {
+    color: var(--bk-bg);
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.developer-name {
+    color: var(--bk-yellow);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.separator {
+    color: var(--bk-bg);
+    margin: 0 5px;
+}
+
+
+.copy {
+    color: var(--bk-bg);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .nav-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 20px 15px;
+        max-width: 360px;
+    }
+
+    .nav-header button {
+        width: 100%;
+        height: auto;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    ul {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .burger-item {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+    .instruction {
+    font-size: 1.5rem;
+}
+
+    .explanation-method {
+        font-size: 0.9em;
+        padding: 0 15px;
+    }
+
+    .sintaxe-img {
+        width: 300px;
+    }
+
+
+    .reduce-item {
+        width: 90%;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .developer-name,
+    .footer-info {
+        font-size: 0.8rem;
+    }
 }
