@@ -1,5 +1,7 @@
 # Método Burguers 🍔🍟
 
+![Preview do Projeto](https://github.com/ronaldomelo116/projetometodoarrayburguer/blob/main/preview-metodo-burguers.gif?raw=true)
+
 Uma aplicação web interativa desenvolvida para ensinar e demonstrar na prática o funcionamento dos quatro principais métodos de iteração de arrays no JavaScript: **`forEach()`**, **`map()`**, **`reduce()`** e **`filter()`**.
 
 Inspirada na identidade visual de uma hamburgueria, a aplicação simula o cardápio e o fluxo de pedidos de um restaurante, aplicando manipulações em tempo real sobre os dados e renderizando o resultado instantaneamente na tela.
